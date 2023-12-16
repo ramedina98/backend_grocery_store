@@ -1,8 +1,8 @@
 # Backend Unedl Grocery Store. 
 
-This proyect was created with the purpose of testing new skills in web development. This is the [Backend] of the project only, but the whole project (backend and frontend) was developed by me.
+This proyect was created with the purpose of testing new skills in web development. This is the **Backend** of the project only, but the whole project (backend and frontend) was developed by me.
 
-link to the [Frontend] repository --> https://github.com/ramedina98/abarrotes_UNEDL.github.io
+link to the **Frontend** repository --> https://github.com/ramedina98/abarrotes_UNEDL.github.io
 
 This is the link to the page, I used render web service to put it online --> https://grocery-store-unedl4.onrender.com/
 
@@ -21,23 +21,23 @@ This is the link to the page, I used render web service to put it online --> htt
 
 The purpose of this app with node.js, is to have access to 4 API's, two to get information (get) and two to send information (post). 
 
-[GET]
+_GET_
 
-1. The first API ["get"] gets all the information from the products table, that it is its purpose. This information is displayed in the main view (/) of the store pages.
+1. The first API _"get"_ gets all the information from the products table, that it is its purpose. This information is displayed in the main view (/) of the store pages.
 
 [FORM] --> /abarrotes_unedl/products
 
-Full [URL]: https://grocery-store-unedl4.onrender.com/[abarrotes_unedl/products]
+Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/products**
 
-2. The following API ["get"] only takes the information of a specific product: product information, details of its contents and opinions of other buyers about the product.
+2. The following API _"get"_ only takes the information of a specific product: product information, details of its contents and opinions of other buyers about the product.
 
-[FORM] --> /abarrotes_unedl/details/:id
+_FORM_ --> /abarrotes_unedl/details/:id
 
-Full [URL]: https://grocery-store-unedl4.onrender.com/[abarrotes_unedl/details/:id]
+Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/details/:id**
 
-[POST]
+_POST_
 
-1. The first API ["post"] we have, helps us to save new opinions from buyers about a specific product in the database.
+1. The first API _"post"_ we have, helps us to save new opinions from buyers about a specific product in the database.
 
 The data and the type of data that are required to be sent to the database are: 
 
@@ -48,19 +48,19 @@ The data and the type of data that are required to be sent to the database are:
 - score --> DECIMAL(3, 2). 
 - id_product --> INTEGER. 
 
-Important note :warning: 
+:warning: Important note :warning: 
 
 The id of the new opinion record is auto incrementable, so it is not necessary to sent it.
 
-[FORM] --> /abarrotes_unedl/nuevaOpinion
+_FORM_ --> /abarrotes_unedl/nuevaOpinion
 
-Full [URL]: https://grocery-store-unedl4.onrender.com/[abarrotes_unedl/nuevaOpinion]
+Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/nuevaOpinion**
 
 2. This API is the most complex in its construction, it must save the information that is sent from the form in the view "Pay view" where it is sent and save data of the buyer, his address and the products that he bought. In addition a PDF is created (calling another function) which is the purchase invoice and a confirmation email is sent (also calling another function) to the buyer. 
 
-This is the correct way to packege the data and send it through the API :warning: 
+:warning: This is the correct way to packege the data and send it through the API :warning: 
 
-- 3 arrays are created, which have the following form and order [(frontend-code)]: 
+- 3 arrays are created, which have the following form and order **(frontend-code)**: 
 ```javascript
 //array where are the buyer's data...
 const buyerData = ['nombre', 'apellidos', 'correo', 'phone'];
@@ -122,11 +122,11 @@ await axios.post('https://grocery-store-unedl4.onrender.com/abarrotes_unedl/purc
 ```
 - After the data is receive and stored in the database, the process continoues to create the PDF with the data sent from the frontend in the arrays, and subsequently, the email is sent attaching the PDF and using the same data sent in the arrays.
 
-[FORM] --> /abarrotes_unedl/purchaseRegistration
+_FORM_ --> /abarrotes_unedl/purchaseRegistration
 
-Full [URL]: https://grocery-store-unedl4.onrender.com/[abarrotes_unedl/purchaseRegistration]
+Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/purchaseRegistration**
 
 ## DataBase
-The database we are working with is small, and was created with [Mysql]. It is hosted at hostinger.
+The database we are working with is small, and was created with **Mysql**. It is hosted at hostinger.
 
-The [MVC] desing pattern was used in this project.
+The **MVC** desing pattern was used in this project.

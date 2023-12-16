@@ -1,10 +1,13 @@
 # Backend Unedl Grocery Store. 
+:information_source: :information_source:
 
 This proyect was created with the purpose of testing new skills in web development. This is the **Backend** of the project only, but the whole project (backend and frontend) was developed by me.
 
 link to the **Frontend** repository --> https://github.com/ramedina98/abarrotes_UNEDL.github.io
 
 This is the link to the page, I used render web service to put it online --> https://grocery-store-unedl4.onrender.com/
+
+:information_source: :information_source:
 
 ## What dependencies does the project use? 
 
@@ -21,19 +24,23 @@ This is the link to the page, I used render web service to put it online --> htt
 
 The purpose of this app with node.js, is to have access to 4 API's, two to get information (get) and two to send information (post). 
 
+## GET API's
+
 _GET_
 
 1. The first API _"get"_ gets all the information from the products table, that it is its purpose. This information is displayed in the main view (/) of the store pages.
 
 [FORM] --> /abarrotes_unedl/products
 
-Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/products**
+Full _URL_: https://grocery-store-unedl4.onrender.com/abarrotes_unedl/products
 
 2. The following API _"get"_ only takes the information of a specific product: product information, details of its contents and opinions of other buyers about the product.
 
 _FORM_ --> /abarrotes_unedl/details/:id
 
-Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/details/:id**
+Full _URL_: https://grocery-store-unedl4.onrender.com/abarrotes_unedl/details/:id
+
+## POST API's
 
 _POST_
 
@@ -54,7 +61,7 @@ The id of the new opinion record is auto incrementable, so it is not necessary t
 
 _FORM_ --> /abarrotes_unedl/nuevaOpinion
 
-Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/nuevaOpinion**
+Full _URL_: https://grocery-store-unedl4.onrender.com/abarrotes_unedl/nuevaOpinion
 
 2. This API is the most complex in its construction, it must save the information that is sent from the form in the view "Pay view" where it is sent and save data of the buyer, his address and the products that he bought. In addition a PDF is created (calling another function) which is the purchase invoice and a confirmation email is sent (also calling another function) to the buyer. 
 
@@ -124,9 +131,14 @@ await axios.post('https://grocery-store-unedl4.onrender.com/abarrotes_unedl/purc
 
 _FORM_ --> /abarrotes_unedl/purchaseRegistration
 
-Full _URL_: https://grocery-store-unedl4.onrender.com/**abarrotes_unedl/purchaseRegistration**
+Full _URL_: https://grocery-store-unedl4.onrender.com/abarrotes_unedl/purchaseRegistration
 
-## DataBase
+## **DataBase** and **desing pattern** 
+
 The database we are working with is small, and was created with **Mysql**. It is hosted at hostinger.
 
 The **MVC** desing pattern was used in this project.
+
+## Credits. 
+
+This project was developed by: [Ricardo-Medina](https://ricardomedina.website/)

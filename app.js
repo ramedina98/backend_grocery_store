@@ -23,7 +23,7 @@ try {
 }
 
 app.get('/', (req, res) => {
-    res.send('hola a todos')
+    res.send('Hello world')
 })
 app.listen(3000, () => {
     console.log('Server up running in http://localhost:3000/')
